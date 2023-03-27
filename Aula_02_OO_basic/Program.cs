@@ -23,4 +23,11 @@ Console.WriteLine(garrafaDoPedro.AnoFabricacao);
 var obj = new Calculadora();
 var result = obj.Calcular(12,20,"somar");
 
-Console.WriteLine("a soma é " + result);
+show("a soma é " + result);  
+
+
+void show(string msg){
+
+    Console.WriteLine(msg);
+
+}
