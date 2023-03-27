@@ -4,7 +4,11 @@ using Atividades;
 
 Console.WriteLine("Digite um número:");
 imprimindo imprimir = new imprimindo();
-int numero = Convert.ToInt32(Console.ReadLine());
+imprimir.Numero = Convert.ToInt32(Console.ReadLine());
 
-var result = imprimir.ImprimindoNumPares();
-Console.WriteLine(result);
+var numeros = imprimir.ImprimindoNumPares();
+
+foreach (var numero in numeros)
+{
+    Console.WriteLine(numero);
+}
