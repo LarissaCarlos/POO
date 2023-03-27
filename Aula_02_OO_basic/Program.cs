@@ -19,14 +19,20 @@ Console.WriteLine(garrafaDoPedro.AnoFabricacao);
 // Console.Write("Você digitou " + retorno);
 
 
+show("Digite um número:");
+double num1 = Convert.ToDouble(Console.ReadLine());
+
+show("Digite mais um número:");
+double num2 = Convert.ToDouble(Console.ReadLine());
 
 var obj = new Calculadora();
-var result = obj.Calcular(12,20,"somar");
+var result = obj.Calcular(num1, num2, "somar");
 
-show("a soma é " + result);  
+show("a soma é " + result);
 
 
-void show(string msg){
+void show(string msg)
+{
 
     Console.WriteLine(msg);
 
