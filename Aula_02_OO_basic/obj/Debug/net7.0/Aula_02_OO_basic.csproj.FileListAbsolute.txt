@@ -1,0 +1,15 @@
+C:\Windows\System32\POO\Aula_02_OO_basic\bin\Debug\net7.0\Aula_02_OO_basic.exe
+C:\Windows\System32\POO\Aula_02_OO_basic\bin\Debug\net7.0\Aula_02_OO_basic.deps.json
+C:\Windows\System32\POO\Aula_02_OO_basic\bin\Debug\net7.0\Aula_02_OO_basic.runtimeconfig.json
+C:\Windows\System32\POO\Aula_02_OO_basic\bin\Debug\net7.0\Aula_02_OO_basic.dll
+C:\Windows\System32\POO\Aula_02_OO_basic\bin\Debug\net7.0\Aula_02_OO_basic.pdb
+C:\Windows\System32\POO\Aula_02_OO_basic\obj\Debug\net7.0\Aula_02_OO_basic.csproj.AssemblyReference.cache
+C:\Windows\System32\POO\Aula_02_OO_basic\obj\Debug\net7.0\Aula_02_OO_basic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Windows\System32\POO\Aula_02_OO_basic\obj\Debug\net7.0\Aula_02_OO_basic.AssemblyInfoInputs.cache
+C:\Windows\System32\POO\Aula_02_OO_basic\obj\Debug\net7.0\Aula_02_OO_basic.AssemblyInfo.cs
+C:\Windows\System32\POO\Aula_02_OO_basic\obj\Debug\net7.0\Aula_02_OO_basic.csproj.CoreCompileInputs.cache
+C:\Windows\System32\POO\Aula_02_OO_basic\obj\Debug\net7.0\Aula_02_OO_basic.dll
+C:\Windows\System32\POO\Aula_02_OO_basic\obj\Debug\net7.0\refint\Aula_02_OO_basic.dll
+C:\Windows\System32\POO\Aula_02_OO_basic\obj\Debug\net7.0\Aula_02_OO_basic.pdb
+C:\Windows\System32\POO\Aula_02_OO_basic\obj\Debug\net7.0\Aula_02_OO_basic.genruntimeconfig.cache
+C:\Windows\System32\POO\Aula_02_OO_basic\obj\Debug\net7.0\ref\Aula_02_OO_basic.dll
