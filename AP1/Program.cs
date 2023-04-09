@@ -23,23 +23,23 @@ namespace MeuProjeto.UI
                 switch (opcao)
                 {
                     case 1:
-                        CadastrarProduto();
+                        
                         break;
 
                     case 2:
-                        ListarProdutos();
+                        
                         break;
 
                     case 3:
-                        CadastrarFornecedor();
+                        
                         break;
                     
                     case 4:
-                        ListarFornecedor();
+                       
                         break;
 
                     case 5:
-                        RealizarCompra();
+                        
                         break;
 
                     case 0:

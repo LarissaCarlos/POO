@@ -9,16 +9,14 @@ namespace AP1
     {
         public int Id { get; set; }
         public string Nome { get; set; }
-        public Phone Telefone { get; set; }
-        public Adress Endereco { get; set; }
+
     
 
-        public Fornecedor(int id, string nome, Phone telefone, Address endereco)
+        public Fornecedor(int id, string nome)
         {
             this.Id = id;
             this.Nome = nome;
-            this.Phone = telefone;
-            this.Address = endereco;
+
   
         }
 
