@@ -7,7 +7,7 @@ namespace AP1
 {
     public class Compra
     {
-        public int Id { get; set; }
+        public int Id { get; private set; }
         public DateTime Data { get; set; }
         public List<Produto> Produtos { get; set; } = new List<Produto>();
     

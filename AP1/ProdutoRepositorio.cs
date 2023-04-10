@@ -7,11 +7,16 @@ namespace AP1
 {
     public class ProdutoRepositorio
     { 
-        private static List<Produto> _produtos = new List<Produto>();
+        private static List<Produto> _produtos = new List<Produto>(); // Criando a Lista Produtos
 
-        public static void Adicionar(Produto produto)
+        public static void Adicionar(Produto produto) 
         {
             _produtos.Add(produto);
+        }
+
+        public IEnumerable<Produto> Listar()  // IEnumerable -> funciona apenas como leitura, n permitindo alteração nas coleções, forma sequencial ou retornar ao início.
+        {
+            return _produtos;
         }
 
         public static void get()
