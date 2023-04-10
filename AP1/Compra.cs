@@ -9,13 +9,13 @@ namespace AP1
     {
         public int Id { get; set; }
         public DateTime Data { get; set; }
-        public List<Produto> Products { get; set; } = new List<Produto>();
+        public List<Produto> Produtos { get; set; } = new List<Produto>();
     
 
         public Compra(int id, DateTime data, Produto produto){
             this.Id = id;
             this.Data = data;
-            Products.Add(produto);
+            Produtos.Add(produto);
 
         }
         
