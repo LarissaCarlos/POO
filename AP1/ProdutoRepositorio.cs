@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 namespace AP1
 {
     public class ProdutoRepositorio
-    {
+    { 
         private static List<Produto> _produtos = new List<Produto>();
 
         public static void Adicionar(Produto produto)
