@@ -5,15 +5,21 @@ using System.Threading.Tasks;
 
 namespace AP1
 {
-    public class FornecedorRepositorio 
+    public class FornecedorRepositorio
     {
-        public class FornecedorRepositorios
-    {
-        private readonly List<Fornecedor> _fornecedores = new List<Fornecedor>();
+        public static List<Fornecedor> _fornecedores = new List<Fornecedor>();
+        private static readonly string nomeFornecedor;
 
-        public void Adicionar(Fornecedor fornecedor)
+        public static void Adicionar()
         {
-            fornecedor.Id = ProximoId();
+            Console.WriteLine("Nome: ");
+            string nome = Console.ReadLine();
+
+            Console.WriteLine("CNPJ: ");
+            float cnpj = float.Parse(Console.ReadLine());
+
+            Fornecedor fornecedor = new Fornecedor(nomeFornecedor, cnpj, nome);
+
             _fornecedores.Add(fornecedor);
         }
 
@@ -22,31 +28,30 @@ namespace AP1
             return _fornecedores;
         }
 
-        public Fornecedor ObterPorId(int id)
+        public static Fornecedor ObterPorId(int id)
         {
             return _fornecedores.FirstOrDefault(f => f.Id == id);
         }
 
-        public int ProximoId()
+        public static int ProximoId()
         {
-            return _fornecedores.Count + 1;
+            int id = 0;
+            return id + 1;
         }
 
-        public void ListarFornecedores()
+        public static void ListarFornecedores()
+        {
+            if (_fornecedores.Count == 0)
             {
-                if (_fornecedores == null || _fornecedores.Count == 0)
+                Console.WriteLine("\nNenhum fornecedor cadastrado!");
+            }
+            else
+            {
+                foreach (var fornecedor in _fornecedores)
                 {
-                    Console.WriteLine("Nenhum fornecedor cadastrado.");
-                }
-                else
-                {
-                    Console.WriteLine("Fornecedores cadastrados:");
-                    foreach (var fornecedor in _fornecedores)
-                    {
-                        Console.WriteLine($"- ID: {fornecedor.Id}, Nome: {fornecedor.Nome}, CNPJ: {fornecedor.Cnpj}");
-                    }
+                    Console.WriteLine($"\nFornecedor: {fornecedor.Nome} | CNPJ: {fornecedor.Cnpj}");
                 }
             }
-    }
+        }
     }
 }

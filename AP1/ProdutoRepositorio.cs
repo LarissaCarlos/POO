@@ -7,11 +7,10 @@ namespace AP1
 {
     public class ProdutoRepositorio : Produto
     {
-        private static List<Produto> _produto = new List<Produto>();
+        private static List<Produto> _produtos = new List<Produto>();
 
         public ProdutoRepositorio(long codBarras, string nome, string valor, string marca, Fornecedor fornecedor) : base(codBarras, nome, valor, marca, fornecedor)
-        {}
-
+        { }
 
         public static void Adicionar()
         {
@@ -30,50 +29,55 @@ namespace AP1
 
             Console.WriteLine("Fornecedor: ");
             string nomeFornecedor = Console.ReadLine();
-            AP1.Fornecedor fornecedor = new AP1.Fornecedor(nomeFornecedor);
+
+            Console.WriteLine("Cnpj Fornecedor: ");
+            float cnpj = float.Parse(Console.ReadLine());
+            string cnpjStr = cnpj.ToString();
+
+            Fornecedor fornecedor = new Fornecedor(nomeFornecedor, cnpj, nome);
 
             ProdutoSimples produtoSimples = new ProdutoSimples(codBarras, nome, valor.ToString(), marca, fornecedor);
 
-            _produto.Add(produtoSimples);
+            _produtos.Add(produtoSimples);
         }
 
         public static void get()
         {
-            if (_produto == null)
+            if (_produtos == null)
             {
                 System.Console.WriteLine("\nNenhum usuário cadastrado!");
             }
-            foreach (var c in _produto)
+            foreach (var c in _produtos)
             {
                 Console.WriteLine($"\nCódigo de barras: {c.CodBarras} | Nome: {c.Nome} | Valor: {c.Valor} | Marca: {c.Marca}");
             }
         }
-         public class Listar
-    {
-        public static void Produto(List<Produto> produto)
+        public class Listar
         {
-            if (produto == null)
+            public static void Produtos(List<Produto> produtos)
             {
-                System.Console.WriteLine("\nNenhum produto cadastrado!");
-            }
-            foreach (var c in produto)
-            {
-                Console.WriteLine($"\nCódigo de barras: {c.CodBarras} | Nome: {c.Nome} | Valor: {c.Valor} | Marca: {c.Marca}");
+                if (produtos == null)
+                {
+                    System.Console.WriteLine("\nNenhum produto cadastrado!");
+                }
+                foreach (var c in produtos)
+                {
+                    Console.WriteLine($"\nCódigo de barras: {c.CodBarras} | Nome: {c.Nome} | Valor: {c.Valor} | Marca: {c.Marca}");
+                }
             }
         }
-    }
         public static void ListarProdutos()
         {
-            Listar.Produto(_produto);
+            Listar.Produtos(_produtos);
         }
         public static Produto get(long codBarras)
         {
-            if (_produto == null)
+            if (_produtos == null)
             {
                 System.Console.WriteLine("\nNenhum usuário cadastrado!");
             }
 
-            return _produto.Find(p => p.CodBarras == codBarras);
+            return _produtos.Find(p => p.CodBarras == codBarras);
         }
     }
 }
