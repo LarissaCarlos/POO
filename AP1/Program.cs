@@ -4,7 +4,7 @@ namespace AP1
 {
     public class Program
     {
-          private static readonly ProdutoRepositorio produtoRepositorio = new ProdutoRepositorio();
+        private static readonly ProdutoRepositorio produtoRepositorio = new ProdutoRepositorio();
         private static readonly FornecedorRepositorio fornecedorRepositorio = new FornecedorRepositorio();
         private static readonly CompraRepositorio compraRepositorio = new CompraRepositorio();
 
@@ -39,13 +39,13 @@ namespace AP1
 
                     case 3:
                         Console.WriteLine("Informe os dados do fornecedor:");
-                        FornecedorRepositorio.Adicionar();
+                       // FornecedorRepositorio.Adicionar();
                         Console.WriteLine("Fornecedor cadastrado com sucesso!");
                         break;
 
                     case 4:
                         Console.WriteLine("Fornecedores cadastrados:");
-                        FornecedorRepositorio.get();
+                       // FornecedorRepositorio.get();
                         break;
 
                     case 5:
@@ -61,9 +61,9 @@ namespace AP1
                         Console.WriteLine("Informe o nome do fornecedor:");
                         string nomeFornecedor = Console.ReadLine();
 
-                        Fornecedor fornecedor = FornecedorRepositorio.get(nomeFornecedor);
+                       Fornecedor fornecedor = FornecedorRepositorio.get(nomeFornecedor);
 
-                        CompraRepositorio.Adicionar(new Compra(CompraRepositorio.ProximoId(), data, produto, fornecedor));
+                     CompraRepositorio.Adicionar(new Compra(CompraRepositorio.ProximoId(), data, produto, fornecedor));//
 
                         Console.WriteLine("Compra realizada com sucesso!");
                         break;

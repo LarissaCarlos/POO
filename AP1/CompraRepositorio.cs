@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace AP1
 {
-    public class CompraRepositorio
+    public class CompraRepositorio 
     {
           private readonly List<Compra> _compras = new List<Compra>();
 
@@ -14,7 +14,7 @@ namespace AP1
             int id = ProximoId();
             DateTime data = DateTime.Now;
 
-            Compra compra = new Compra(id, data, produto);
+            Compra compra = new Compra(id, data, Produto);
 
             _compras.Add(compra);
         }

@@ -7,7 +7,7 @@ namespace AP1
 {
     public class FornecedorRepositorio 
     {
-        public class FornecedorRepository
+        public class FornecedorRepositorios
     {
         private readonly List<Fornecedor> _fornecedores = new List<Fornecedor>();
 

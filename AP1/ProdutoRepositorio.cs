@@ -7,10 +7,11 @@ namespace AP1
 {
     public class ProdutoRepositorio : Produto
     {
-        private static List<Produto> _produtos = new List<Produto>();
+        private static List<Produto> _produto = new List<Produto>();
 
         public ProdutoRepositorio(long codBarras, string nome, string valor, string marca, Fornecedor fornecedor) : base(codBarras, nome, valor, marca, fornecedor)
-        { }
+        {}
+
 
         public static void Adicionar()
         {
@@ -33,29 +34,29 @@ namespace AP1
 
             ProdutoSimples produtoSimples = new ProdutoSimples(codBarras, nome, valor.ToString(), marca, fornecedor);
 
-            _produtos.Add(produtoSimples);
+            _produto.Add(produtoSimples);
         }
 
         public static void get()
         {
-            if (_produtos == null)
+            if (_produto == null)
             {
                 System.Console.WriteLine("\nNenhum usuário cadastrado!");
             }
-            foreach (var c in _produtos)
+            foreach (var c in _produto)
             {
                 Console.WriteLine($"\nCódigo de barras: {c.CodBarras} | Nome: {c.Nome} | Valor: {c.Valor} | Marca: {c.Marca}");
             }
         }
          public class Listar
     {
-        public static void Produtos(List<Produto> produtos)
+        public static void Produto(List<Produto> produto)
         {
-            if (produtos == null)
+            if (produto == null)
             {
                 System.Console.WriteLine("\nNenhum produto cadastrado!");
             }
-            foreach (var c in produtos)
+            foreach (var c in produto)
             {
                 Console.WriteLine($"\nCódigo de barras: {c.CodBarras} | Nome: {c.Nome} | Valor: {c.Valor} | Marca: {c.Marca}");
             }
@@ -63,16 +64,16 @@ namespace AP1
     }
         public static void ListarProdutos()
         {
-            Listar.Produtos(_produtos);
+            Listar.Produto(_produto);
         }
         public static Produto get(long codBarras)
         {
-            if (_produtos == null)
+            if (_produto == null)
             {
                 System.Console.WriteLine("\nNenhum usuário cadastrado!");
             }
 
-            return _produtos.Find(p => p.CodBarras == codBarras);
+            return _produto.Find(p => p.CodBarras == codBarras);
         }
     }
 }
